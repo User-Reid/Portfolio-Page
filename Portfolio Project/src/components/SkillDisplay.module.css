@@ -13,17 +13,23 @@ img {
 }
 
 .skillDescription {
-  width: 100%;
+  width: auto;
+  margin: 0px;
+  flex-wrap: wrap;
+  padding: 20px;
 }
 
 .skillTextBox {
   display: flex;
+  align-items: center;
+  margin-bottom: 15px;
 }
 
-.skillTextBox p {
-  margin: 0;
+.skillAndYears h2,
+.skillAndYears p {
+  min-width: 200px;
+  margin: 0px 0px 0px 10px;
 }
 
-.skillTextBox h2 {
-  margin: 10px 0px 0px 0px;
+.projectIcons {
 }

@@ -20,6 +20,12 @@ function SkillDisplay({
         </div>
       </div>
       <p className={styles.skillDescription}>{skillDescription}</p>
+      <div className="projectIcons">
+        <button>Project 1</button>
+        <button>Project 2</button>
+        <button>Project 3</button>
+        <button>Project 4</button>
+      </div>
     </div>
   );
 }
