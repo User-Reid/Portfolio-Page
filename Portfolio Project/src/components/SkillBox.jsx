@@ -1,5 +1,7 @@
 import { useReducer } from "react";
 import ProjectDisplay from "./ProjectDisplay";
+import styles from "../components/SkillBox.module.css";
+import SkillDisplay from "./SkillDisplay";
 
 // Incorperate some way to display icons of skills so that they can navigate through the different skills. This operate the state.
 const initialState = {
@@ -135,51 +137,44 @@ function SkillBox() {
   }
 
   return (
-    <div>
-      <div className="skills-row">
-        <button onClick={() => handleSkillSwitch("react")}>
+    <div className={styles.container}>
+      <div className={styles.skillsRow}>
+        <a onClick={() => handleSkillSwitch("react")}></a>
+        <a onClick={() => handleSkillSwitch("html")}>Change me to React</a>
+        <a onClick={() => handleSkillSwitch("css")}>Change me to React</a>
+        <a onClick={() => handleSkillSwitch("javascript")}>
           Change me to React
-        </button>
-        <button onClick={() => handleSkillSwitch("html")}>
-          Change me to React
-        </button>
-        <button onClick={() => handleSkillSwitch("css")}>
-          Change me to React
-        </button>
-        <button onClick={() => handleSkillSwitch("javascript")}>
-          Change me to React
-        </button>
-        <button onClick={() => handleSkillSwitch("nodeJS")}>
-          Change me to nodeJS
-        </button>
-        <button onClick={() => handleSkillSwitch("sql")}>
-          Change me to sql
-        </button>
+        </a>
+        <a onClick={() => handleSkillSwitch("nodeJS")}>Change me to nodeJS</a>
+        <a onClick={() => handleSkillSwitch("sql")}>Change me to sql</a>
       </div>
-      <h2>{skill}</h2>
-      <p>{yearsOfExperience}</p>
-      <p>{skillDescription}</p>
-      {/* <ProjectDisplay project={project} /> */}
-      {/* Example button */}
-      <div className="skills-row">
-        <button onClick={() => handleSkillSwitch("adobePhotoshop")}>
+      <div className={styles.skillContainer}>
+        <SkillDisplay
+          skill={skill}
+          skillDescription={skillDescription}
+          yearsOfExperience={yearsOfExperience}
+        />
+        <ProjectDisplay project={project} isLoading={isLoading} />
+      </div>
+      <div className={styles.skillsRow}>
+        <a onClick={() => handleSkillSwitch("adobePhotoshop")}>
           Change me to adobePhotoshop
-        </button>
-        <button onClick={() => handleSkillSwitch("adobePremierPro")}>
+        </a>
+        <a onClick={() => handleSkillSwitch("adobePremierPro")}>
           Change me to adobePremierPro
-        </button>
-        <button onClick={() => handleSkillSwitch("finalCutPro")}>
+        </a>
+        <a onClick={() => handleSkillSwitch("finalCutPro")}>
           Change me to finalCutPro
-        </button>
-        <button onClick={() => handleSkillSwitch("adobeAfterEffects")}>
+        </a>
+        <a onClick={() => handleSkillSwitch("adobeAfterEffects")}>
           Change me to adobeAfterEffects
-        </button>
-        <button onClick={() => handleSkillSwitch("adobeIllustrator")}>
+        </a>
+        <a onClick={() => handleSkillSwitch("adobeIllustrator")}>
           Change me to adobeIllustrator
-        </button>
-        <button onClick={() => handleSkillSwitch("adobeInDesign")}>
+        </a>
+        <a onClick={() => handleSkillSwitch("adobeInDesign")}>
           Change me to adobeInDesign
-        </button>
+        </a>
       </div>
     </div>
   );
