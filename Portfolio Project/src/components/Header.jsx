@@ -1,11 +1,7 @@
-import VideoBanner from "./VideoBanner";
+// import VideoBanner from "./VideoBanner";
 
 function Header() {
-  return (
-    <div>
-      <VideoBanner />
-    </div>
-  );
+  return <header>{/* <VideoBanner /> */}</header>;
 }
 
 export default Header;
