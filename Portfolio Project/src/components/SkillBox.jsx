@@ -138,15 +138,43 @@ function SkillBox() {
 
   return (
     <div className={styles.container}>
-      <div className={styles.skillsRow}>
-        <a onClick={() => handleSkillSwitch("react")}></a>
-        <a onClick={() => handleSkillSwitch("html")}>Change me to React</a>
-        <a onClick={() => handleSkillSwitch("css")}>Change me to React</a>
-        <a onClick={() => handleSkillSwitch("javascript")}>
-          Change me to React
+      <div className={styles.skillRow}>
+        <a onClick={() => handleSkillSwitch("react")}>
+          <img src="/react-icon-100x100.png" alt="react logo" />
         </a>
-        <a onClick={() => handleSkillSwitch("nodeJS")}>Change me to nodeJS</a>
-        <a onClick={() => handleSkillSwitch("sql")}>Change me to sql</a>
+        <a onClick={() => handleSkillSwitch("html")}>
+          <img src="/html-icon-100x100.png" alt="html logo" />
+        </a>
+        <a onClick={() => handleSkillSwitch("css")}>
+          <img src="/css-icon-100x100.png" alt="css logo" />
+        </a>
+        <a onClick={() => handleSkillSwitch("javascript")}>
+          <img src="/javascript-icon-100x100.png" alt="javascript logo" />
+        </a>
+        <a onClick={() => handleSkillSwitch("nodeJS")}>
+          <img src="/nodeJs-icon-100x100.png" alt="nodeJS icon" />
+        </a>
+        <a onClick={() => handleSkillSwitch("sql")}>
+          <img src="/sql-icon-100x100.png" alt="sql logo" />
+        </a>
+        <a onClick={() => handleSkillSwitch("adobePhotoshop")}>
+          <img src="/photoshop-100x100.png" alt="photoshop logo" />
+        </a>
+        <a onClick={() => handleSkillSwitch("adobePremierPro")}>
+          <img src="/premierePro-100x100.png" alt="premier pro logo" />
+        </a>
+        <a onClick={() => handleSkillSwitch("finalCutPro")}>
+          <img src="/finalCutPro-100x100.png" alt="final cut pro logo" />
+        </a>
+        <a onClick={() => handleSkillSwitch("adobeAfterEffects")}>
+          <img src="/afterEffects-100x100.png" alt="after effects logo" />
+        </a>
+        <a onClick={() => handleSkillSwitch("adobeIllustrator")}>
+          <img src="/illustrator-100x100.png" alt="illustrator logo" />
+        </a>
+        <a onClick={() => handleSkillSwitch("adobeInDesign")}>
+          <img src="/inDesign-100x100.png" alt="inDesign logo" />
+        </a>
       </div>
       <div className={styles.skillContainer}>
         <SkillDisplay
@@ -155,26 +183,6 @@ function SkillBox() {
           yearsOfExperience={yearsOfExperience}
         />
         <ProjectDisplay project={project} isLoading={isLoading} />
-      </div>
-      <div className={styles.skillsRow}>
-        <a onClick={() => handleSkillSwitch("adobePhotoshop")}>
-          Change me to adobePhotoshop
-        </a>
-        <a onClick={() => handleSkillSwitch("adobePremierPro")}>
-          Change me to adobePremierPro
-        </a>
-        <a onClick={() => handleSkillSwitch("finalCutPro")}>
-          Change me to finalCutPro
-        </a>
-        <a onClick={() => handleSkillSwitch("adobeAfterEffects")}>
-          Change me to adobeAfterEffects
-        </a>
-        <a onClick={() => handleSkillSwitch("adobeIllustrator")}>
-          Change me to adobeIllustrator
-        </a>
-        <a onClick={() => handleSkillSwitch("adobeInDesign")}>
-          Change me to adobeInDesign
-        </a>
       </div>
     </div>
   );

@@ -10,7 +10,12 @@
   justify-content: center;
 }
 
+.skillRow a:hover {
+  cursor: pointer;
+}
+
 .skillContainer {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
