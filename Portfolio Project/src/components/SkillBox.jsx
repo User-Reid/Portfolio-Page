@@ -10,6 +10,7 @@ const initialState = {
   project: "reactProject",
   isLoading: false,
   yearsOfExperience: 1,
+  skillLogo: "/react-icon-100x100.png",
 };
 
 function reducer(state, action) {
@@ -22,6 +23,7 @@ function reducer(state, action) {
           "React is my favorite library! I Love how efficient and fast it is!",
         project: "reactProject",
         yearsOfExperience: 2,
+        skillLogo: "/react-icon-100x100.png",
       };
     case "skill/javascript":
       return {
@@ -31,6 +33,7 @@ function reducer(state, action) {
           "JavaScript is incredible and I cannot stress its importance! It is what is making all of this happen right now!",
         project: "javascriptProject",
         yearsOfExperience: 2,
+        skillLogo: "/javascript-icon-100x100.png",
       };
     case "skill/css":
       return {
@@ -40,6 +43,7 @@ function reducer(state, action) {
           "CSS is one of my favorite things to do! It is so much fun being creative and designing things just the way you want them!",
         project: "cssProject",
         yearsOfExperience: 2,
+        skillLogo: "/css-icon-100x100.png",
       };
     case "skill/html":
       return {
@@ -49,6 +53,7 @@ function reducer(state, action) {
           "HTML is where it all started for me and many others I would imagine. Though it can be viewed by most as simple, I see it as essential and neccissary to learn!",
         project: "htmlProject",
         yearsOfExperience: 2,
+        skillLogo: "/html-icon-100x100.png",
       };
     case "skill/nodeJS":
       return {
@@ -58,6 +63,7 @@ function reducer(state, action) {
           "Node.JS would be my first backend language to learn. I very much enjoy using it 😀",
         project: "nodeJsProject",
         yearsOfExperience: 2,
+        skillLogo: "/nodeJs-icon-100x100.png",
       };
     case "skill/sql":
       return {
@@ -66,6 +72,7 @@ function reducer(state, action) {
         skillDescription: "SQL is neato mosquito",
         project: "sqlProject",
         yearsOfExperience: 2,
+        skillLogo: "/sql-icon-100x100.png",
       };
     case "skill/adobePhotoshop":
       return {
@@ -75,6 +82,7 @@ function reducer(state, action) {
           "I have been using Photoshop for roughly 8 years now! I have used photoshop for graphic design, photo editing, and content creation!",
         project: "photoshopProject",
         yearsOfExperience: 8,
+        skillLogo: "/photoshop-100x100.png",
       };
     case "skill/adobePremierPro":
       return {
@@ -84,6 +92,7 @@ function reducer(state, action) {
           "Adobe Premier Pro has been my go-to video editing software as of late due to its incredible tools and user prefrences (and because I mainly use Windows😅",
         project: "adobePremierProProject",
         yearsOfExperience: 6,
+        skillLogo: "/premierePro-100x100.png",
       };
     case "skill/finalCutPro":
       return {
@@ -93,6 +102,7 @@ function reducer(state, action) {
           "Final Cut Pro was actually the first video editing software that I used way back in 2014! I have always found Final Cut Pro to be very user friendly and easy to use. I also find Final Cut Pro capable of getting the job done quick without sacrificing quality!",
         project: "finalCutProProject",
         yearsOfExperience: 10,
+        skillLogo: "/finalCutPro-100x100.png",
       };
     case "skill/adobeAfterEffects":
       return {
@@ -102,6 +112,7 @@ function reducer(state, action) {
           "Adobe After Effects is the top of the line when it comes to video editting and it is clear to see in the work that it is used for.",
         project: "adobeAfterEffectsProject",
         yearsOfExperience: 3,
+        skillLogo: "/afterEffects-100x100.png",
       };
     case "skill/adobeIllustrator":
       return {
@@ -111,6 +122,7 @@ function reducer(state, action) {
           "Adobe Illustrator has been a great tool for me in the last few years. I have used it to take many graphic designs into real world use such as tents or merchandise!",
         project: "illustratorProject",
         yearsOfExperience: 2,
+        skillLogo: "/illustrator-100x100.png",
       };
     case "skill/adobeInDesign":
       return {
@@ -120,6 +132,7 @@ function reducer(state, action) {
           "Adobe InDesign has been my go to adobe product when it comes to postcards, newsletters, and more!",
         project: "adobeInDesignProject",
         yearsOfExperience: 2,
+        skillLogo: "/inDesign-100x100.png",
       };
   }
 }
@@ -128,12 +141,19 @@ function reducer(state, action) {
 
 function SkillBox() {
   const [
-    { skill, skillDescription, project, isLoading, yearsOfExperience },
+    {
+      skill,
+      skillDescription,
+      project,
+      isLoading,
+      yearsOfExperience,
+      skillLogo,
+    },
     dispatch,
   ] = useReducer(reducer, initialState);
 
-  function handleSkillSwitch(skill) {
-    dispatch({ type: `skill/${skill}` });
+  function handleSkillSwitch(skill, imageURL) {
+    dispatch({ type: `skill/${skill}`, payload: imageURL });
   }
 
   return (
@@ -178,6 +198,7 @@ function SkillBox() {
       </div>
       <div className={styles.skillContainer}>
         <SkillDisplay
+          skillLogo={skillLogo}
           skill={skill}
           skillDescription={skillDescription}
           yearsOfExperience={yearsOfExperience}

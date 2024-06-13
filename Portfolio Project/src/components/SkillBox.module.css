@@ -3,19 +3,29 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 1200px;
 }
 
 .skillRow {
   display: flex;
   justify-content: center;
+  width: 80vw;
+  flex-wrap: wrap;
 }
 
 .skillRow a:hover {
   cursor: pointer;
 }
 
+.skillRow img {
+  margin: 2px;
+  width: 12vw;
+  max-width: 100px;
+}
+
 .skillContainer {
   display: flex;
   justify-content: center;
   width: 100%;
+  flex-wrap: wrap;
 }
