@@ -10,14 +10,16 @@ function SkillDisplay({
     <div className={styles.container}>
       <div className={styles.skillTextBox}>
         <img src={skillLogo} />
-        <h2>{skill}</h2>
-        {yearsOfExperience === 1 ? (
-          <p>{yearsOfExperience} year of experience</p>
-        ) : (
-          <p>{yearsOfExperience} years of experience</p>
-        )}
+        <div className={styles.skillAndYears}>
+          <h2>{skill}</h2>
+          {yearsOfExperience === 1 ? (
+            <p>{yearsOfExperience} year of experience</p>
+          ) : (
+            <p>{yearsOfExperience} years of experience</p>
+          )}
+        </div>
       </div>
-      <p>{skillDescription}</p>
+      <p className={styles.skillDescription}>{skillDescription}</p>
     </div>
   );
 }
