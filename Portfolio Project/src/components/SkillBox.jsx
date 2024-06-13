@@ -5,14 +5,13 @@ import SkillDisplay from "./SkillDisplay";
 
 // Incorperate some way to display icons of skills so that they can navigate through the different skills. This operate the state.
 const initialState = {
-  skill: "",
+  skill: "banana",
   skillDescription: "",
   project: "",
   isLoading: false,
   yearsOfExperience: 1,
   skillLogo: "",
-  uiColor: "",
-  active: false,
+  bgColor: "",
 };
 
 function reducer(state, action) {
@@ -20,7 +19,7 @@ function reducer(state, action) {
     case "skill/react":
       return {
         ...state,
-        skill: "React",
+        skill: "react",
         skillDescription:
           "React is my favorite library! I Love how efficient and fast it is!",
         project: "https://youtu.be/ilocOyuerS0",
@@ -31,7 +30,7 @@ function reducer(state, action) {
     case "skill/javascript":
       return {
         ...state,
-        skill: "JavaScript",
+        skill: "javaScript",
         skillDescription:
           "JavaScript is incredible and I cannot stress its importance! It is what is making all of this happen right now!",
         project: "https://youtu.be/JY8oUxNEByA",
@@ -42,7 +41,7 @@ function reducer(state, action) {
     case "skill/css":
       return {
         ...state,
-        skill: "CSS",
+        skill: "css",
         skillDescription:
           "CSS is one of my favorite things to do! It is so much fun being creative and designing things just the way you want them!",
         project: "https://youtu.be/fo35K3wcJ9c",
@@ -53,7 +52,7 @@ function reducer(state, action) {
     case "skill/html":
       return {
         ...state,
-        skill: "HTML",
+        skill: "html",
         skillDescription:
           "HTML is where it all started for me and many others I would imagine. Though it can be viewed by most as simple, I see it as essential and neccissary to learn!",
         project: "https://youtu.be/_vZDpPBjce0",
@@ -64,7 +63,7 @@ function reducer(state, action) {
     case "skill/nodeJS":
       return {
         ...state,
-        skill: "Node.JS",
+        skill: "nodeJS",
         skillDescription:
           "Node.JS would be my first backend language to learn. I very much enjoy using it 😀",
         project: "https://youtu.be/oXZHO_oVvfM",
@@ -75,7 +74,7 @@ function reducer(state, action) {
     case "skill/sql":
       return {
         ...state,
-        skill: "SQL",
+        skill: "sql",
         skillDescription: "SQL is neato mosquito",
         project: "https://youtu.be/SQ6LOdDTYGY",
         yearsOfExperience: 2,
@@ -85,7 +84,7 @@ function reducer(state, action) {
     case "skill/adobePhotoshop":
       return {
         ...state,
-        skill: "Adobe Photoshop",
+        skill: "adobePhotoshop",
         skillDescription:
           "I have been using Photoshop for roughly 8 years now! I have used photoshop for graphic design, photo editing, and content creation!",
         project: "photoshopProject",
@@ -96,7 +95,7 @@ function reducer(state, action) {
     case "skill/adobePremierPro":
       return {
         ...state,
-        skill: "Adobe Premier Pro",
+        skill: "adobePremierePro",
         skillDescription:
           "Adobe Premier Pro has been my go-to video editing software as of late due to its incredible tools and user prefrences (and because I mainly use Windows😅",
         project: "adobePremierProProject",
@@ -107,7 +106,7 @@ function reducer(state, action) {
     case "skill/finalCutPro":
       return {
         ...state,
-        skill: "Final Cut Pro",
+        skill: "finalCutPro",
         skillDescription:
           "Final Cut Pro was actually the first video editing software that I used way back in 2014! I have always found Final Cut Pro to be very user friendly and easy to use. I also find Final Cut Pro capable of getting the job done quick without sacrificing quality!",
         project: "finalCutProProject",
@@ -118,7 +117,7 @@ function reducer(state, action) {
     case "skill/adobeAfterEffects":
       return {
         ...state,
-        skill: "Adobe After Effects",
+        skill: "adobeAfterEffects",
         skillDescription:
           "Adobe After Effects is the top of the line when it comes to video editting and it is clear to see in the work that it is used for.",
         project: "adobeAfterEffectsProject",
@@ -129,7 +128,7 @@ function reducer(state, action) {
     case "skill/adobeIllustrator":
       return {
         ...state,
-        skill: "Adobe Illustrator",
+        skill: "illustrator",
         skillDescription:
           "Adobe Illustrator has been a great tool for me in the last few years. I have used it to take many graphic designs into real world use such as tents or merchandise!",
         project: "illustratorProject",
@@ -140,7 +139,7 @@ function reducer(state, action) {
     case "skill/adobeInDesign":
       return {
         ...state,
-        skill: "Adobe InDesign",
+        skill: "adobeInDesign",
         skillDescription:
           "Adobe InDesign has been my go to adobe product when it comes to postcards, newsletters, and more!",
         project: "adobeInDesignProject",
@@ -169,9 +168,12 @@ function SkillBox() {
     dispatch,
   ] = useReducer(reducer, initialState);
 
-  function handleSkillSwitch(skill, imageURL) {
-    setDisplay(!display);
-    dispatch({ type: `skill/${skill}`, payload: imageURL });
+  function handleSkillSwitch(x, imageURL) {
+    console.log(x);
+    console.log(skill);
+    skill === x
+      ? setDisplay(!display)
+      : dispatch({ type: `skill/${x}`, payload: imageURL });
   }
 
   return (
