@@ -5,7 +5,7 @@ import SkillDisplay from "./SkillDisplay";
 
 // Incorperate some way to display icons of skills so that they can navigate through the different skills. This operate the state.
 const initialState = {
-  skill: "banana",
+  skill: "",
   skillDescription: "",
   project: "",
   isLoading: false,
@@ -16,10 +16,10 @@ const initialState = {
 
 function reducer(state, action) {
   switch (action.type) {
-    case "skill/react":
+    case "skill/React":
       return {
         ...state,
-        skill: "react",
+        skill: "React",
         skillDescription:
           "React is my favorite library! I Love how efficient and fast it is!",
         project: "https://youtu.be/ilocOyuerS0",
@@ -27,10 +27,10 @@ function reducer(state, action) {
         skillLogo: "/react-icon-100x100.png",
         bgColor: "linear-gradient(to bottom, lightblue, white)",
       };
-    case "skill/javascript":
+    case "skill/Javascript":
       return {
         ...state,
-        skill: "javaScript",
+        skill: "Javascript",
         skillDescription:
           "JavaScript is incredible and I cannot stress its importance! It is what is making all of this happen right now!",
         project: "https://youtu.be/JY8oUxNEByA",
@@ -38,10 +38,10 @@ function reducer(state, action) {
         skillLogo: "/javascript-icon-100x100.png",
         bgColor: "linear-gradient(to bottom, yellow, white)",
       };
-    case "skill/css":
+    case "skill/CSS":
       return {
         ...state,
-        skill: "css",
+        skill: "CSS",
         skillDescription:
           "CSS is one of my favorite things to do! It is so much fun being creative and designing things just the way you want them!",
         project: "https://youtu.be/fo35K3wcJ9c",
@@ -49,10 +49,10 @@ function reducer(state, action) {
         skillLogo: "/css-icon-100x100.png",
         bgColor: "linear-gradient(to bottom, blue, white)",
       };
-    case "skill/html":
+    case "skill/HTML":
       return {
         ...state,
-        skill: "html",
+        skill: "HTML",
         skillDescription:
           "HTML is where it all started for me and many others I would imagine. Though it can be viewed by most as simple, I see it as essential and neccissary to learn!",
         project: "https://youtu.be/_vZDpPBjce0",
@@ -60,10 +60,10 @@ function reducer(state, action) {
         skillLogo: "/html-icon-100x100.png",
         bgColor: "linear-gradient(to bottom, orange, white)",
       };
-    case "skill/nodeJS":
+    case "skill/NodeJS":
       return {
         ...state,
-        skill: "nodeJS",
+        skill: "NodeJS",
         skillDescription:
           "Node.JS would be my first backend language to learn. I very much enjoy using it 😀",
         project: "https://youtu.be/oXZHO_oVvfM",
@@ -71,20 +71,20 @@ function reducer(state, action) {
         skillLogo: "/nodeJs-icon-100x100.png",
         bgColor: "linear-gradient(to bottom, green, white)",
       };
-    case "skill/sql":
+    case "skill/SQL":
       return {
         ...state,
-        skill: "sql",
+        skill: "SQL",
         skillDescription: "SQL is neato mosquito",
         project: "https://youtu.be/SQ6LOdDTYGY",
         yearsOfExperience: 2,
         skillLogo: "/sql-icon-100x100.png",
         bgColor: "linear-gradient(to bottom, lightblue, white)",
       };
-    case "skill/adobePhotoshop":
+    case "skill/Adobe Photoshop":
       return {
         ...state,
-        skill: "adobePhotoshop",
+        skill: "Adobe Photoshop",
         skillDescription:
           "I have been using Photoshop for roughly 8 years now! I have used photoshop for graphic design, photo editing, and content creation!",
         project: "photoshopProject",
@@ -92,10 +92,10 @@ function reducer(state, action) {
         skillLogo: "/photoshop-100x100.png",
         bgColor: "linear-gradient(to bottom, darkblue, white)",
       };
-    case "skill/adobePremierPro":
+    case "skill/Adobe Premiere Pro":
       return {
         ...state,
-        skill: "adobePremierePro",
+        skill: "Adobe Premiere Pro",
         skillDescription:
           "Adobe Premier Pro has been my go-to video editing software as of late due to its incredible tools and user prefrences (and because I mainly use Windows😅",
         project: "adobePremierProProject",
@@ -103,10 +103,10 @@ function reducer(state, action) {
         skillLogo: "/premierePro-100x100.png",
         bgColor: "linear-gradient(to bottom, purple, white)",
       };
-    case "skill/finalCutPro":
+    case "skill/Final Cut Pro":
       return {
         ...state,
-        skill: "finalCutPro",
+        skill: "Final Cut Pro",
         skillDescription:
           "Final Cut Pro was actually the first video editing software that I used way back in 2014! I have always found Final Cut Pro to be very user friendly and easy to use. I also find Final Cut Pro capable of getting the job done quick without sacrificing quality!",
         project: "finalCutProProject",
@@ -114,10 +114,10 @@ function reducer(state, action) {
         skillLogo: "/finalCutPro-100x100.png",
         bgColor: "linear-gradient(to bottom, pink, white)",
       };
-    case "skill/adobeAfterEffects":
+    case "skill/Adobe After Effects":
       return {
         ...state,
-        skill: "adobeAfterEffects",
+        skill: "Adobe After Effects",
         skillDescription:
           "Adobe After Effects is the top of the line when it comes to video editting and it is clear to see in the work that it is used for.",
         project: "adobeAfterEffectsProject",
@@ -125,10 +125,10 @@ function reducer(state, action) {
         skillLogo: "/afterEffects-100x100.png",
         bgColor: "linear-gradient(to bottom, purple, white)",
       };
-    case "skill/adobeIllustrator":
+    case "skill/Adobe Illustrator":
       return {
         ...state,
-        skill: "illustrator",
+        skill: "Adobe Illustrator",
         skillDescription:
           "Adobe Illustrator has been a great tool for me in the last few years. I have used it to take many graphic designs into real world use such as tents or merchandise!",
         project: "illustratorProject",
@@ -136,10 +136,10 @@ function reducer(state, action) {
         skillLogo: "/illustrator-100x100.png",
         bgColor: "linear-gradient(to bottom, orangered, white)",
       };
-    case "skill/adobeInDesign":
+    case "skill/Adobe InDesign":
       return {
         ...state,
-        skill: "adobeInDesign",
+        skill: "Adobe InDesign",
         skillDescription:
           "Adobe InDesign has been my go to adobe product when it comes to postcards, newsletters, and more!",
         project: "adobeInDesignProject",
@@ -171,9 +171,13 @@ function SkillBox() {
   function handleSkillSwitch(x, imageURL) {
     console.log(x);
     console.log(skill);
-    skill === x
-      ? setDisplay(!display)
-      : dispatch({ type: `skill/${x}`, payload: imageURL });
+    console.log(display);
+    if (skill === x) {
+      setDisplay(!display);
+    } else {
+      setDisplay(true);
+      dispatch({ type: `skill/${x}`, payload: imageURL });
+    }
   }
 
   return (
@@ -182,40 +186,40 @@ function SkillBox() {
       style={{ background: bgColor === "" ? "" : bgColor }}
     >
       <div className={styles.skillRow}>
-        <a onClick={() => handleSkillSwitch("react")}>
+        <a onClick={() => handleSkillSwitch("React")}>
           <img src="/react-icon-100x100.png" alt="react logo" />
         </a>
-        <a onClick={() => handleSkillSwitch("html")}>
+        <a onClick={() => handleSkillSwitch("HTML")}>
           <img src="/html-icon-100x100.png" alt="html logo" />
         </a>
-        <a onClick={() => handleSkillSwitch("css")}>
+        <a onClick={() => handleSkillSwitch("CSS")}>
           <img src="/css-icon-100x100.png" alt="css logo" />
         </a>
-        <a onClick={() => handleSkillSwitch("javascript")}>
+        <a onClick={() => handleSkillSwitch("Javascript")}>
           <img src="/javascript-icon-100x100.png" alt="javascript logo" />
         </a>
-        <a onClick={() => handleSkillSwitch("nodeJS")}>
+        <a onClick={() => handleSkillSwitch("NodeJS")}>
           <img src="/nodeJs-icon-100x100.png" alt="nodeJS icon" />
         </a>
-        <a onClick={() => handleSkillSwitch("sql")}>
+        <a onClick={() => handleSkillSwitch("SQL")}>
           <img src="/sql-icon-100x100.png" alt="sql logo" />
         </a>
-        <a onClick={() => handleSkillSwitch("adobePhotoshop")}>
+        <a onClick={() => handleSkillSwitch("Adobe Photoshop")}>
           <img src="/photoshop-100x100.png" alt="photoshop logo" />
         </a>
-        <a onClick={() => handleSkillSwitch("adobePremierPro")}>
+        <a onClick={() => handleSkillSwitch("Adobe Premiere Pro")}>
           <img src="/premierePro-100x100.png" alt="premier pro logo" />
         </a>
-        <a onClick={() => handleSkillSwitch("adobeAfterEffects")}>
+        <a onClick={() => handleSkillSwitch("Adobe After Effects")}>
           <img src="/afterEffects-100x100.png" alt="after effects logo" />
         </a>
-        <a onClick={() => handleSkillSwitch("adobeIllustrator")}>
+        <a onClick={() => handleSkillSwitch("Adobe Illustrator")}>
           <img src="/illustrator-100x100.png" alt="illustrator logo" />
         </a>
-        <a onClick={() => handleSkillSwitch("adobeInDesign")}>
+        <a onClick={() => handleSkillSwitch("Adobe InDesign")}>
           <img src="/inDesign-100x100.png" alt="inDesign logo" />
         </a>
-        <a onClick={() => handleSkillSwitch("finalCutPro")}>
+        <a onClick={() => handleSkillSwitch("Final Cut Pro")}>
           <img src="/finalCutPro-100x100.png" alt="final cut pro logo" />
         </a>
       </div>
