@@ -24,7 +24,7 @@ function reducer(state, action) {
         skillDescription:
           "React is my favorite library! I Love how efficient and fast it is!",
         project: "https://youtu.be/ilocOyuerS0",
-        yearsOfExperience: 2,
+        yearsOfExperience: 1,
         skillLogo: "/react-icon-100x100.png",
         bgColor: "linear-gradient(to bottom, lightblue, white)",
       };
@@ -35,7 +35,7 @@ function reducer(state, action) {
         skillDescription:
           "JavaScript is incredible and I cannot stress its importance! It is what is making all of this happen right now!",
         project: "https://youtu.be/JY8oUxNEByA",
-        yearsOfExperience: 2,
+        yearsOfExperience: 1,
         skillLogo: "/javascript-icon-100x100.png",
         bgColor: "linear-gradient(to bottom, yellow, white)",
       };
@@ -68,7 +68,7 @@ function reducer(state, action) {
         skillDescription:
           "Node.JS would be my first backend language to learn. I very much enjoy using it 😀",
         project: "https://youtu.be/oXZHO_oVvfM",
-        yearsOfExperience: 2,
+        yearsOfExperience: 1,
         skillLogo: "/nodeJs-icon-100x100.png",
         bgColor: "linear-gradient(to bottom, green, white)",
       };
@@ -78,7 +78,7 @@ function reducer(state, action) {
         skill: "SQL",
         skillDescription: "SQL is neato mosquito",
         project: "https://youtu.be/SQ6LOdDTYGY",
-        yearsOfExperience: 2,
+        yearsOfExperience: 1,
         skillLogo: "/sql-icon-100x100.png",
         bgColor: "linear-gradient(to bottom, lightblue, white)",
       };

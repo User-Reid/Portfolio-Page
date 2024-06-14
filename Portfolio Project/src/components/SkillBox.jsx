@@ -19,9 +19,6 @@ function SkillBox({
   const [display, setDisplay] = useState(false);
 
   function handleSkillSwitch(x, imageURL) {
-    console.log(x);
-    console.log(skill);
-    console.log(display);
     if (skill === x) {
       setDisplay(!display);
     } else {
@@ -29,8 +26,6 @@ function SkillBox({
       dispatch({ type: `skill/${x}`, payload: imageURL });
     }
   }
-
-  console.log(skill);
 
   return (
     <div
